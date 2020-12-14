@@ -2,6 +2,22 @@
 Automated installation of Hadoop single-node and multi-node clusters
 
 
+# For first time if you are access SSH remote server in new system, just update it. Open the ssh configuration file,
+
+# vi /etc/ssh/sshd_config
+PermitRootLogin without-password
+
+change to
+
+PermitRootLogin yes
+
+Restart your ssh service.
+
+restart ssh server.
+
+
+
+
 
 Instructions for HadoopSingleNode Cluster Setup
 
@@ -16,6 +32,8 @@ Instructions for HadoopSingleNode Cluster Setup
     3.b.  ./hadoopSingleNodeInstaller.sh
 
 
+
+# unable to login via password of hadoop
 
 
 Solution:
@@ -44,7 +62,7 @@ starting resourcemanager, logging to /home/amtex/Documents/installed/hadoop/logs
 localhost: starting nodemanager, logging to /home/amtex/Documents/installed/hadoop/logs/yarn-amtex-nodemanager-amtex-desktop.out
 5)password not asking
 
-$ jps 
+# $ jps 
 12373 Jps
 11823 SecondaryNameNode
 11643 DataNode
